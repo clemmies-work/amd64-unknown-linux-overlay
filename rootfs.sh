@@ -11,7 +11,7 @@ RSYNC_DST_PATH="usr/bin/"
 OPENSSH_URL="https://output.circle-artifacts.com/output/job/b8abcdd8-bada-49f2-899e-eeb6d1c0cb24/artifacts/0/artifacts/openssh-aarch64.tgz"
 OPENSSH_SRC_PATH="opt/openssh/libexec/sftp-server"
 OPENSSH_DST_PATH="usr/libexec/"
-PYTHON_URL="https://github.com/indygreg/python-build-standalone/releases/download/20240415/cpython-3.10.14+20240415-aarch64-unknown-linux-gnu-install_only.tar.gz"
+PYTHON_URL="https://github.com/indygreg/python-build-standalone/releases/download/20240415/cpython-3.12.3+20240415-aarch64-unknown-linux-gnu-install_only.tar.gz"
 
 WORKSPACE_DIR="workspace"
 WORKSPACE_PREV_DIR="workspace_prev"
