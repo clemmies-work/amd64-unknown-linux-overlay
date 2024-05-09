@@ -46,7 +46,7 @@ mv "$SOURCES_DIR/$OPENSSH_SRC_PATH" "$OPENSSH_DST_PATH/"
 mv "$SOURCES_DIR/$BTM_SRC_PATH" "$BTM_DST_PATH/"
 mv "$SOURCES_DIR/$RG_SRC_PATH" "$RG_DST_PATH/"
 mv "$SOURCES_DIR/rsync" "$RSYNC_DST_PATH/"
-mv "$SOURCES_DIR/python"/* .
+rsync -auP "$SOURCES_DIR/python"/* "usr/"
 
 rm -rf "$SOURCES_DIR"
 
