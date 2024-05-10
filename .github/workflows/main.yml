@@ -12,10 +12,8 @@ jobs:
         uses: actions/checkout@v4
       - name: build rootfs
         run: sudo ./rootfs.sh
-      - name: squash rootfs
-        run: sudo ./squash.sh
       - name: upload rootfs
         uses: actions/upload-artifact@v4
         with:
           name: rootfs
-          path: output/rootfs.sqsh
+          path: rootfs.tar.gz
