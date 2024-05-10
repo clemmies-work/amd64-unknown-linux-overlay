@@ -53,3 +53,4 @@ rm -rf "$SOURCES_DIR"
 popd
 
 cp -R "$OVERLAY_DIR"/* "$WORKSPACE_DIR"
+tar czvf rootfs.tar.gz "$WORKSPACE_DIR/*"
