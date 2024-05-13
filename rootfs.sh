@@ -12,6 +12,8 @@ OPENSSH_URL="https://output.circle-artifacts.com/output/job/b8abcdd8-bada-49f2-8
 OPENSSH_SRC_PATH="opt/openssh/libexec/sftp-server"
 OPENSSH_DST_PATH="usr/libexec/"
 PYTHON_URL="https://github.com/indygreg/python-build-standalone/releases/download/20240415/cpython-3.12.3+20240415-aarch64-unknown-linux-gnu-install_only.tar.gz"
+AGGRO_URL="https://github.com/clemmies-work/aggro/releases/download/v0.1.0/aggro-aarch64-unknown-linux-gnu"
+AGGRO_DST_PATH="usr/bin/"
 
 WORKSPACE_DIR="workspace"
 WORKSPACE_PREV_DIR="workspace_prev"
@@ -31,12 +33,14 @@ wget -O "btm.tar.gz" "$BTM_URL"
 wget -O "rg.tar.gz" "$RG_URL"
 wget -O "rsync" "$RSYNC_URL"
 wget -O "python.tar.gz" "$PYTHON_URL"
+wget -O "aggro" "$AGGRO_URL"
 
 tar xf "openssh.tar.gz" "$OPENSSH_SRC_PATH"
 tar xf "btm.tar.gz" "$BTM_SRC_PATH"
 tar xf "rg.tar.gz" "$RG_SRC_PATH"
 chmod +x "rsync"
 tar xf "python.tar.gz"
+chmod +x "aggro"
 popd
 
 mkdir -p "usr/bin"
@@ -47,6 +51,7 @@ mv "$SOURCES_DIR/$BTM_SRC_PATH" "$BTM_DST_PATH/"
 mv "$SOURCES_DIR/$RG_SRC_PATH" "$RG_DST_PATH/"
 mv "$SOURCES_DIR/rsync" "$RSYNC_DST_PATH/"
 rsync -auP "$SOURCES_DIR/python"/* "usr/"
+mv "$SOURCES_DIR/aggro" "$AGGRO_DST_PATH/"
 
 rm -rf "$SOURCES_DIR"
 
