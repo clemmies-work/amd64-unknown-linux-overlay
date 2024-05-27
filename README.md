@@ -1,4 +1,4 @@
-# aarch64-unknown-linux-overlay
+# amd64-unknown-linux-overlay
 
 overlay for stuff
 
